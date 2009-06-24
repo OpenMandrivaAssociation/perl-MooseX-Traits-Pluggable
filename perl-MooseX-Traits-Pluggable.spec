@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 License:    GPL or Artistic
 Group:      Development/Perl
 Summary:    An extension to MooseX::Traits
@@ -21,6 +21,7 @@ BuildRequires: perl(Test::Exception)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(namespace::autoclean)
 BuildRequires: perl-Test-use-ok
+Requires:   perl(MooseX::Traits)
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
