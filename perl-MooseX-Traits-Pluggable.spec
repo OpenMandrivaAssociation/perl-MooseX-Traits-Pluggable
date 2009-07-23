@@ -1,14 +1,16 @@
-%define upstream_name   MooseX-Traits-Pluggable
-%define upstream_version    0.04
+%define upstream_name    MooseX-Traits-Pluggable
+%define upstream_version 0.06
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
-License:    GPL or Artistic
-Group:      Development/Perl
+Release:    %mkrel 1
+
 Summary:    An extension to MooseX::Traits
+License:    GPL+ or Artistic
+Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source:     http://www.cpan.org/modules/by-module/MooseX/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/MooseX/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Class::MOP)
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(List::MoreUtils)
@@ -21,9 +23,9 @@ BuildRequires: perl(Test::Exception)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(namespace::autoclean)
 BuildRequires: perl-Test-use-ok
-Requires:   perl(MooseX::Traits)
+BuildRoot: %{_tmppath}/%{name}-%{version}
 BuildArch: noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+Requires:  perl(MooseX::Traits)
 
 %description
 See the MooseX::Traits manpage for usage information.
