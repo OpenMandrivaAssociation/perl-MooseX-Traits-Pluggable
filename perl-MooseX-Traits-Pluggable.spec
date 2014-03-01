@@ -1,9 +1,8 @@
-%define upstream_name    MooseX-Traits-Pluggable
-%define upstream_version 0.10
+%define upstream_name    MooseX-Traits-Pluggable%define upstream_version 0.12
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:	An extension to MooseX::Traits
 License:	GPL+ or Artistic
@@ -88,4 +87,5 @@ make test
 
 * Sun Jun 21 2009 cpan2dist 0.04-1mdv
 - initial mdv release, generated with cpan2dist
+
 
